@@ -10,6 +10,11 @@ import ResultDetails from "./ResultDetails";
 import { withNavigation } from "react-navigation";
 
 const ResultList = ({ title, result, navigation }) => {
+  // hide screen data until it fetches complete
+  if (!result.length) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
