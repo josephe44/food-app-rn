@@ -25,11 +25,23 @@ const SearchScreen = () => {
       />
 
       {errorMessage ? null : <Text>{errorMessage}</Text>}
-      <Text>we have found {results.length} results</Text>
+      {/* <Text>we have found {results.length} results</Text> */}
       <ScrollView>
-        <ResultList title="Cost Effective" result={filterResultsByPrice("$")} />
-        <ResultList title="Bit Pricier" result={filterResultsByPrice("$$")} />
-        <ResultList title="Big Spender" result={filterResultsByPrice("$$$")} />
+        <ResultList
+          title="Cost Effective"
+          result={filterResultsByPrice("$")}
+         
+        />
+        <ResultList
+          title="Bit Pricier"
+          result={filterResultsByPrice("$$")}
+          
+        />
+        <ResultList
+          title="Big Spender"
+          result={filterResultsByPrice("$$$")}
+          
+        />
       </ScrollView>
     </View>
   );
